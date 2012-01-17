@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<title>Slider from input</title>
+	<link href="css/basic.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="../-shared/EnhanceJS/enhance.js"></script>		
+	<script type="text/javascript">
+		// Run capabilities test
+		enhance({
+			loadScripts: [
+				'../-shared/jquery.min.js',
+				'../-shared/jqueryui.min.js',
+				'js/jQuery.peSlider.js',
+				'js/example.js'
+			],
+			loadStyles: [
+				'css/enhanced.css'
+			]
+		});   
+    </script>
+</head>
+<body>
+
+
+<form method="get" action="#">
+	<fieldset id="criteria">
+		<legend><span>Apartment Criteria</span></legend>
+
+		<div class="question">
+			<label for="price">Max Rent ($):</label>
+			<input type="number" name="price" id="price" value="2000" min="0" max="5000" size="4" data-units="dollars" />
+		</div>
+		<div class="question">
+			<label for="bedrooms">Min bedrooms:</label>
+			<input type="number" name="bedrooms" id="bedrooms" value="2" min="0" max="10" size="2" data-units="bedrooms" />
+		</div>
+		<div class="question">
+			<label for="baths">Min baths:</label>
+			<input type="number" name="baths" id="baths" value="2" min="0" max="10" size="2" data-units="baths" />
+		</div>
+	</fieldset>
+	
+	
+	
+	<fieldset id="amenities">
+		<legend><span>Amenity Preferences</span></legend>	
+		
+		<div class="question">
+			<label for="subway">Subway access:</label>
+			<select name="subway" id="subway">
+				<option value="a">Not important</option>
+				<option value="b">Somewhat important</option>
+				<option value="c">Pretty Important</option>
+				<option value="d">Must have</option>
+			</select>
+		</div>
+		
+		<div class="question">
+			<label for="water">Water views:</label>
+			<select name="water" id="water">
+				<option value="a">Not important</option>
+				<option value="b">Somewhat important</option>
+				<option value="c">Pretty Important</option>
+				<option value="d">Must have</option>
+			</select>
+		</div>
+		
+		<div class="question">
+			<label for="walking">Walking paths:</label>
+			<select name="walking" id="walking">
+				<option value="a">Not important</option>
+				<option value="b">Somewhat important</option>
+				<option value="c">Pretty Important</option>
+				<option value="d">Must have</option>
+			</select>
+		</div>
+	</fieldset>
+	<input type="submit" name="search" id="search" value="Search apartments" />
+</form>
+
+	
+	
+</body>
+</html>
